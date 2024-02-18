@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Warddle</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <div class="container mx-auto p-4">
+        <h1 class="text-center text-6xl font-bold mb-6 text-yellow-300">Star Warddle</h1>
+        <p class="text-center text-2xl font-bold mb-6 text-yellow-300">The Character Guessing Game<br></p>
+        <div class="flex flex-col items-center">
+            <div class="relative" id="autocomplete-container">
+                <input type="text" id="guess-input" placeholder="Enter a Star Wars character" class="text-center w-64 p-2 rounded bg-gray-700 placeholder-gray-400 text-white border border-gray-500 focus:border-blue-500" />
+                <div class="absolute left-0 right-0 mt-1 z-10 bg-gray-800 border border-gray-600 rounded-md shadow-lg overflow-hidden" id="suggestions-dropdown" style="display: none;">
+                    <!-- Suggestions will be dynamically inserted here -->
+                </div>
+            </div>
+            <button id="guess-button" class="w-64 mt-3 bg-blue-600 p-2 rounded text-white font-semibold hover:bg-blue-700 transition-colors">Guess</button>
+            
+            <span><br></span>
+
+        </div>
+        <div id="guess-grid" class="max-w-2xl mx-auto mb-6">
+            <!-- Dynamically generated guess rows will go here -->
+            <!-- Placeholder for guess grid -->
+            <div class="grid grid-cols-7 gap-4 mb-4 text-center">
+                <div class="col-span-1 bg-white text-black font-bold p-4 rounded min-w-[500px] flex-grow">Name</div>
+                <div class="col-span-1 bg-white text-black font-bold p-4 rounded min-w-[120px] flex-grow">Height</div>
+                <div class="col-span-1 bg-white text-black font-bold p-4 rounded min-w-[120px] flex-grow">Gender</div>
+                <div class="col-span-1 bg-white text-black font-bold p-4 rounded min-w-[120px] flex-grow">Species</div>
+                <div class="col-span-1 bg-white text-black font-bold p-4 rounded min-w-[120px] flex-grow">Homeworld</div>
+                <div class="col-span-1 bg-white text-black font-bold p-4 rounded min-w-[120px] flex-grow">Birth Year</div>
+                <div class="col-span-1 bg-white text-black font-bold p-4 rounded min-w-[120px] flex-grow">Appearances</div>
+            </div>            
+        </div>
+    </div>
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
+
