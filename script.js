@@ -174,7 +174,7 @@ function colorCodeCell(actual, guess, attribute) {
     const actualNum = parseInt(actual, 10);
     const guessNum = parseInt(guess, 10);
     if (Math.abs(actualNum - guessNum) <= 10) {
-    colorClass = 'bg-yellow-500'; // Yellow for close
+    colorClass = 'bg-yellow-400'; // Yellow for close
     }
     } else if (attribute === 'films') {
         // Convert actual and guess film URLs to film abbreviations
@@ -294,14 +294,48 @@ async function updateUI(guess) {
     guessGrid.appendChild(guessRow);
 }
 
-// Check if the guess is correct
+// Configure Modal
+function configureModal(title, content, success) {
+    document.getElementById("modal-title").textContent = title;
+    document.getElementById("modal-content").textContent = content;
+    const modalCloseButton = document.getElementById("modal-close");
+
+    if (success) {
+        modalCloseButton.classList.replace("bg-blue-500", "bg-green-500");
+        modalCloseButton.classList.replace("hover:bg-blue-700", "hover:bg-green-700");
+    } else {
+        modalCloseButton.classList.replace("bg-green-500", "bg-blue-500");
+        modalCloseButton.classList.replace("hover:bg-green-700", "hover:bg-blue-700");
+    }
+
+    showModal();
+}
+
+function showModal() {
+    document.getElementById("failure-modal").classList.remove('hidden');
+}
+
+function closeModal() {
+    document.getElementById("failure-modal").classList.add('hidden');
+}
+
+// Attach the closeModal function to the close button
+document.getElementById("modal-close").addEventListener("click", closeModal);
+
+
+
 function checkWinCondition(guess) {
     if (guess.name.toLowerCase() === gameState.targetCharacter.name.toLowerCase()) {
-        alert("Congratulations! You've guessed correctly.");
-        // Implement what happens when the user wins
+        // User wins
+        const title = "Congratulations!";
+        const content = "You've guessed correctly. The character was: " + gameState.targetCharacter.name + ".";
+        configureModal(title, content, true);
     } else if (gameState.guesses.length >= gameState.maxGuesses) {
-        alert("Game over! You've reached the maximum number of guesses. Character: " + gameState.targetCharacte.name);
-        // Implement what happens when the user loses
+        // User loses
+        const title = "Game Over";
+        const content = "You've reached the maximum number of guesses. The character was: " + gameState.targetCharacter.name + ".";
+        configureModal(title, content, false);
     }
-    // You can expand this with more detailed conditions
+    // Additional conditions can be added here
 }
+
