@@ -164,7 +164,7 @@ function updateUI(guessCharacter, result) {
 
     // Create a new row element for the guess
     const guessRow = document.createElement('div');
-    guessRow.className = 'grid grid-cols-7 gap-4 text-center';
+    guessRow.className = 'grid grid-cols-7 text-center border border-black';
 
     // Define attributes to display and their corresponding labels
     const attributes = ['Name', 'Height', 'Gender', 'Species', 'Homeworld', 'Allegiance'];
@@ -177,7 +177,7 @@ function updateUI(guessCharacter, result) {
 
         // Create a cell for each attribute
         const cell = document.createElement('div');
-        cell.className = `p-4 text-black font-bold rounded overflow-hidden text-ellipsis whitespace-nowrap ${getBackgroundClass(result[attribute])}`;
+        cell.className = `p-4 justify-center text-black border-2 border-black font-bold overflow-hidden text-ellipsis whitespace-nowrap text-xs sm:text-sm md:text-base ${getBackgroundClass(result[attribute])}`;
 
         let content = guessCharacter[attribute] || 'N/A'; // Default content
         if (attribute === 'Height') {
