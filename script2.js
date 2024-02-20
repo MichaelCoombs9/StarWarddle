@@ -164,7 +164,7 @@ function updateUI(guessCharacter, result) {
 
     // Create a new row element for the guess
     const guessRow = document.createElement('div');
-    guessRow.className = 'grid grid-cols-7 text-center border border-black';
+    guessRow.className = 'grid grid-cols-6 text-center border border-black';
 
     // Define attributes to display and their corresponding labels
     const attributes = ['Name', 'Height', 'Gender', 'Species', 'Homeworld', 'Allegiance'];
