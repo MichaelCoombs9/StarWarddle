@@ -123,6 +123,16 @@ function getHeightComparisonArrow(actualHeight, guessedHeight) {
     }
 }
 
+function parseYear(yearString) {
+    if (yearString.includes('BBY')) {
+        return -parseInt(yearString.replace('BBY', ''), 10); // Represent BBY as negative numbers
+    } else if (yearString.includes('ABY')) {
+        return parseInt(yearString.replace('ABY', ''), 10); // Represent ABY as positive numbers
+    } else {
+        return NaN; // Handle unexpected formats
+    }
+}
+
 function getBirthYearComparisonSymbol(actualBirthYear, guessedBirthYear) {
     // Remove BBY or ABY and parse the year as a number
     const parseYear = (yearString) => {
@@ -161,22 +171,77 @@ const filmAbbreviations = {
     '4': 'IV', // A New Hope
     '5': 'V', // The Empire Strikes Back
     '6': 'VI', // Return of the Jedi
-    '7': 'VII' // 
+    '7': 'VII' // The Force Awakens
 };
-console.log("Sample film URL:", "https://swapi.dev/api/films/1/".split("/"));
+function getFilmAbbreviations(filmUrls) {
+    return filmUrls.map(url => {
+        // Extract the numeric ID from the film URL
+        const filmId = url.match(/films\/(\d+)\//)[1];
+        return filmAbbreviations[filmId];
+    });
+}
 
+// Example usage for comparison
+const targetFilmAbbreviations = getFilmAbbreviations(gameState.targetCharacter.films);
+const guessFilmAbbreviations = getFilmAbbreviations(guess.films);
+
+// Determine if there's an exact match or partial match
+const exactMatch = targetFilmAbbreviations.length === guessFilmAbbreviations.length &&
+                   targetFilmAbbreviations.every(abbrev => guessFilmAbbreviations.includes(abbrev));
+const partialMatch = guessFilmAbbreviations.some(abbrev => targetFilmAbbreviations.includes(abbrev));
+
+// Assign color based on the match type
+let colorClass;
+if (exactMatch) {
+    colorClass = 'bg-green-500'; // All guessed films match exactly
+} else if (partialMatch) {
+    colorClass = 'bg-yellow-500'; // At least one, but not all, guessed films match
+} else {
+    colorClass = 'bg-gray-700'; // No matches
+}
 
 function colorCodeCell(actual, guess, attribute) {
     let colorClass = 'bg-gray-700'; // Default to gray for incorrect
-
-    if (attribute === 'height' || attribute === 'birth_year') {
-    // Convert both to numbers and check if they're within 10 units
-    const actualNum = parseInt(actual, 10);
-    const guessNum = parseInt(guess, 10);
-    if (Math.abs(actualNum - guessNum) <= 10) {
-    colorClass = 'bg-yellow-400'; // Yellow for close
+// Species
+    if (attribute === 'species') {
+        fetchAdditionalData(gameState.targetCharacter, 'species').then(targetSpecies => {
+            fetchAdditionalData(guess, 'species').then(guessSpecies => {
+                if (guessSpecies.name !== targetSpecies.name && guessSpecies.homeworld === targetSpecies.homeworld) {
+                    // Here you set the cell to yellow since they share a homeworld but are not the same species
+                    return 'bg-yellow-500'; // Yellow for close
+                } else if (guessSpecies.name === targetSpecies.name) {
+                    return 'bg-green-500'; // Green for correct
+                } else {
+                    return 'bg-gray-700'; // Gray for incorrect
+                }
+            });
+        });
     }
-    } else if (attribute === 'films') {
+
+    // Check for the 'height' attribute
+    if (attribute === 'height') {
+        const actualHeight = parseInt(actual, 10);
+        const guessHeight = parseInt(guess, 10);
+        if (actualHeight === guessHeight) {
+            colorClass = 'bg-green-500'; // Green for correct
+        } else if (Math.abs(actualHeight - guessHeight) <= 10) {
+            colorClass = 'bg-yellow-400'; // Yellow for close
+        }
+    }
+    
+    else if (attribute === 'birth_year') {
+        const actualYear = parseYear(actual);
+        const guessedYear = parseYear(guess);
+
+        if (actualYear === guessedYear) {
+            colorClass = 'bg-green-500'; // Green for correct
+        } else if (Math.abs(actualYear - guessedYear) <= 5) { // Assuming 5 is your range for "close"
+            colorClass = 'bg-yellow-400'; // Yellow for close
+        }
+    }
+
+    // Logic for 'films' attribute remains unchanged
+    else if (attribute === 'films') {
         // Convert actual and guess film URLs to film abbreviations
         // Ensure the URL is not undefined before attempting to split
         const actualFilmsAbbreviations = actual.map(url => {
@@ -208,6 +273,7 @@ function colorCodeCell(actual, guess, attribute) {
 
     return colorClass;
 }
+
 
 // Fetch additional data for species, homeworld, and films
 async function fetchAdditionalData(character, attr) {

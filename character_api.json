@@ -1,0 +1,754 @@
+[
+  {
+    "Name": "Luke Skywalker",
+    "Height": 172,
+    "Homeworld": "Tatooine",
+    "Species": "Human",
+    "Gender": "Male",
+    "Allegiance": "Jedi Order, Rebel Alliance, New Republic"
+  },
+  {
+    "Name": "C-3PO",
+    "Height": 167,
+    "Homeworld": "Tatooine",
+    "Species": "Droid",
+    "Gender": null,
+    "Allegiance": "Republic, Rebel Alliance, New Republic, Resistance"
+  },
+  {
+    "Name": "R2-D2",
+    "Height": 96,
+    "Homeworld": "Naboo",
+    "Species": "Droid",
+    "Gender": null,
+    "Allegiance": "Republic, Rebel Alliance, New Republic, Resistance"
+  },
+  {
+    "Name": "Darth Vader",
+    "Height": 202,
+    "Homeworld": "Tatooine",
+    "Species": "Human",
+    "Gender": "Male",
+    "Allegiance": "Galactic Empire"
+  },
+  {
+    "Name": "Leia Organa",
+    "Height": 150,
+    "Homeworld": "Alderaan",
+    "Species": "Human",
+    "Gender": "Female",
+    "Allegiance": "Rebel Alliance, New Republic, Resistance"
+  },
+  {
+    "Name": "Owen Lars",
+    "Height": 178,
+    "Homeworld": "Tatooine",
+    "Species": "Human",
+    "Gender": "Male",
+    "Allegiance": "White Suns"
+  },
+  {
+    "Name": "Beru Whitesun lars",
+    "Height": 165,
+    "Homeworld": "Tatooine",
+    "Species": "Human",
+    "Gender": "Female",
+    "Allegiance": "White Suns"
+  },
+  {
+    "Name": "Biggs Darklighter",
+    "Height": 183,
+    "Homeworld": "Tatooine",
+    "Species": "Human",
+    "Gender": "Male",
+    "Allegiance": "Rebel Alliance"
+  },
+  {
+    "Name": "Obi-Wan Kenobi",
+    "Height": 182,
+    "Homeworld": "Stewjon",
+    "Species": "Human",
+    "Gender": "Male",
+    "Allegiance": "Jedi Order, Galactic Republic"
+  },
+  {
+    "Name": "Anakin Skywalker",
+    "Height": 188,
+    "Homeworld": "Tatooine",
+    "Species": "Human",
+    "Gender": "Male",
+    "Allegiance": "Jedi Order, Galactic Republic, Galactic Empire"
+  },
+  {
+    "Name": "Wilhuff Tarkin",
+    "Height": 180,
+    "Homeworld": "Eriadu",
+    "Species": "Human",
+    "Gender": "Male",
+    "Allegiance": "Galactic Republic, Galactic Empire"
+  },
+  {
+    "Name": "Chewbacca",
+    "Height": 228,
+    "Homeworld": "Kashyyyk",
+    "Species": "Wookie",
+    "Gender": "Male",
+    "Allegiance": "Rebel Alliance, New Republic"
+  },
+  {
+    "Name": "Han Solo",
+    "Height": 180,
+    "Homeworld": "Corellia",
+    "Species": "Human",
+    "Gender": "Male",
+    "Allegiance": "Bounty Hunters' Guild, Rebel Alliance, New Republic, Resistance"
+  },
+  {
+    "Name": "Greedo",
+    "Height": 173,
+    "Homeworld": "Rodia",
+    "Species": "Rodian",
+    "Gender": "Male",
+    "Allegiance": "Bounty Hunters' Guild"
+  },
+  {
+    "Name": "Jabba Desilijic Tiure",
+    "Height": 175,
+    "Homeworld": "Nal Hutta",
+    "Species": "Hutt",
+    "Gender": "Hermaphrodite",
+    "Allegiance": "Hutt Clan"
+  },
+  {
+    "Name": "Wedge Antilles",
+    "Height": 170,
+    "Homeworld": "Corellia",
+    "Species": "Human",
+    "Gender": "Male",
+    "Allegiance": "Rebel Alliance"
+  },
+  {
+    "Name": "Yoda",
+    "Height": 66,
+    "Homeworld": "Unknown",
+    "Species": "Unknown",
+    "Gender": "Male",
+    "Allegiance": "Jedi Order, Galactic Republic"
+  },
+  {
+    "Name": "Palpatine",
+    "Height": 170,
+    "Homeworld": "Naboo",
+    "Species": "Human",
+    "Gender": "Male",
+    "Allegiance": "Sith, Galactic Republic, Galactic Empire"
+  },
+  {
+    "Name": "Boba Fett",
+    "Height": 183,
+    "Homeworld": "Kamino",
+    "Species": "Human (Clone)",
+    "Gender": "Male",
+    "Allegiance": "Sepratist, Bounty Hunters' Guild"
+  },
+  {
+    "Name": "IG-88",
+    "Height": 200,
+    "Homeworld": "unknown",
+    "Species": "Droid",
+    "Gender": null,
+    "Allegiance": "Bounty Hunters' Guild"
+  },
+  {
+    "Name": "Bossk",
+    "Height": 190,
+    "Homeworld": "Trandosha",
+    "Species": "Trandoshan",
+    "Gender": "Male",
+    "Allegiance": "Bounty Hunters' Guild"
+  },
+  {
+    "Name": "Lando Calrissian",
+    "Height": 177,
+    "Homeworld": "Socorro",
+    "Species": "Human",
+    "Gender": "Male",
+    "Allegiance": "Rebel Alliance, New Republic, Resistance"
+  },
+  {
+    "Name": "Lobot",
+    "Height": 175,
+    "Homeworld": "Bespin",
+    "Species": "Human",
+    "Gender": "Male",
+    "Allegiance": "Galactic Empire, New Republic"
+  },
+  {
+    "Name": "Ackbar",
+    "Height": 180,
+    "Homeworld": "Mon Cala",
+    "Species": "Mon Calamari",
+    "Gender": "Male",
+    "Allegiance": "Rebel Alliance, New Republic"
+  },
+  {
+    "Name": "Mon Mothma",
+    "Height": 150,
+    "Homeworld": "Chandrila",
+    "Species": "Human",
+    "Gender": "Female",
+    "Allegiance": "Galactic Republic, Rebel Alliance, New Republic"
+  },
+  {
+    "Name": "Wicket Warrick",
+    "Height": 88,
+    "Homeworld": "Endor",
+    "Species": "Ewok",
+    "Gender": "Male",
+    "Allegiance": "Rebel Alliance"
+  },
+  {
+    "Name": "Nien Nunb",
+    "Height": 160,
+    "Homeworld": "Sullust",
+    "Species": "Sullustan",
+    "Gender": "Male",
+    "Allegiance": "Rebel Alliance, New Republic"
+  },
+  {
+    "Name": "Qui-Gon Jinn",
+    "Height": 193,
+    "Homeworld": "unknown",
+    "Species": "Human",
+    "Gender": "Male",
+    "Allegiance": "Jedi Order, Galactic Republic"
+  },
+  {
+    "Name": "Nute Gunray",
+    "Height": 191,
+    "Homeworld": "Cato Neimoidia",
+    "Species": "Neimodian",
+    "Gender": "Male",
+    "Allegiance": "Trade Federation, Sepratist"
+  },
+  {
+    "Name": "Finis Valorum",
+    "Height": 170,
+    "Homeworld": "Coruscant",
+    "Species": "Human",
+    "Gender": "Male",
+    "Allegiance": "Galactic Republic"
+  },
+  {
+    "Name": "Padme Amidala",
+    "Height": 185,
+    "Homeworld": "Naboo",
+    "Species": "Human",
+    "Gender": "Female",
+    "Allegiance": "Royal House of Naboo, Galactic Republic"
+  },
+  {
+    "Name": "Jar Jar Binks",
+    "Height": 196,
+    "Homeworld": "Naboo",
+    "Species": "Gungan",
+    "Gender": "Male",
+    "Allegiance": "Gungan High Council, Galactic Republic"
+  },
+  {
+    "Name": "Rugor Nass",
+    "Height": 206,
+    "Homeworld": "Naboo",
+    "Species": "Gungan",
+    "Gender": "Male",
+    "Allegiance": "Gungan High Council"
+  },
+  {
+    "Name": "Quarsh Panaka",
+    "Height": 183,
+    "Homeworld": "Naboo",
+    "Species": "Human",
+    "Gender": "Male",
+    "Allegiance": "Royal House of Naboo, Galactic Republic"
+  },
+  {
+    "Name": "Shmi Skywalker",
+    "Height": 163,
+    "Homeworld": "Tatooine",
+    "Species": "Human",
+    "Gender": "Female",
+    "Allegiance": "White Suns"
+  },
+  {
+    "Name": "Darth Maul",
+    "Height": 175,
+    "Homeworld": "Dathomir",
+    "Species": "Zabrak",
+    "Gender": "Male",
+    "Allegiance": "Sith, Nightbrothers, Mandalorians, Crimson Dawn"
+  },
+  {
+    "Name": "Bib Fortuna",
+    "Height": 180,
+    "Homeworld": "Ryloth",
+    "Species": "Twi'lek",
+    "Gender": "Male",
+    "Allegiance": "Hutt Clan"
+  },
+  {
+    "Name": "Ayla Secura",
+    "Height": 178,
+    "Homeworld": "Ryloth",
+    "Species": "Twi'lek",
+    "Gender": "Male",
+    "Allegiance": "Jedi Order, Galactic Republic"
+  },
+  {
+    "Name": "Mace Windu",
+    "Height": 188,
+    "Homeworld": "Haruun Kal",
+    "Species": "Human",
+    "Gender": "Male",
+    "Allegiance": "Jedi Order, Galactic Republic"
+  },
+  {
+    "Name": "Ki-Adi-Mundi",
+    "Height": 198,
+    "Homeworld": "Cerea",
+    "Species": "Cerean",
+    "Gender": "Male",
+    "Allegiance": "Jedi Order, Galactic Republic"
+  },
+  {
+    "Name": "Kit Fisto",
+    "Height": 196,
+    "Homeworld": "Glee Anselm",
+    "Species": "Nautolan",
+    "Gender": "Male",
+    "Allegiance": "Jedi Order, Galactic Republic"
+  },
+  {
+    "Name": "Eeth Koth",
+    "Height": 171,
+    "Homeworld": "Iridonia",
+    "Species": "Zabrak",
+    "Gender": "Male",
+    "Allegiance": "Jedi Order, Galactic Republic"
+  },
+  {
+    "Name": "Adi Gallia",
+    "Height": 184,
+    "Homeworld": "Coruscant",
+    "Species": "Tholothian",
+    "Gender": "Female",
+    "Allegiance": "Jedi Order, Galactic Republic"
+  },
+  {
+    "Name": "Saesee Tiin",
+    "Height": 188,
+    "Homeworld": "Iktotch",
+    "Species": "Iktotchi",
+    "Gender": "Male",
+    "Allegiance": "Jedi Order, Galactic Republic"
+  },
+  {
+    "Name": "Yarael Poof",
+    "Height": 264,
+    "Homeworld": "Quermia",
+    "Species": "Quermian",
+    "Gender": "Male",
+    "Allegiance": "Jedi Order, Galactic Republic"
+  },
+  {
+    "Name": "Plo Koon",
+    "Height": 188,
+    "Homeworld": "Dorin",
+    "Species": "Kel Dor",
+    "Gender": "Male",
+    "Allegiance": "Jedi Order, Galactic Republic"
+  },
+  {
+    "Name": "Mas Amedda",
+    "Height": 196,
+    "Homeworld": "Champala",
+    "Species": "Chagrian",
+    "Gender": "Male",
+    "Allegiance": "Galactic Republic, Galactic Empire"
+  },
+  {
+    "Name": "Gregar Typho",
+    "Height": 185,
+    "Homeworld": "Naboo",
+    "Species": "Unknown",
+    "Gender": "Male",
+    "Allegiance": "Royal House of Naboo, Galactic Republic"
+  },
+  {
+    "Name": "Luminara Unduli",
+    "Height": 170,
+    "Homeworld": "Mirial",
+    "Species": "Mirialan",
+    "Gender": "Female",
+    "Allegiance": "Jedi Order, Galactic Republic"
+  },
+  {
+    "Name": "Barriss Offee",
+    "Height": 166,
+    "Homeworld": "Mirial",
+    "Species": "Mirialan",
+    "Gender": "Female",
+    "Allegiance": "Jedi Order, Galactic Republic"
+  },
+  {
+    "Name": "Dooku",
+    "Height": 193,
+    "Homeworld": "Serenno",
+    "Species": "Human",
+    "Gender": "Male",
+    "Allegiance": "Jedi Order, Sepratist"
+  },
+  {
+    "Name": "Bail Organa",
+    "Height": 191,
+    "Homeworld": "Alderaan",
+    "Species": "Human",
+    "Gender": "Male",
+    "Allegiance": "Galactic Republic, Galactic Empire, Rebel Alliance"
+  },
+  {
+    "Name": "Jango Fett",
+    "Height": 183,
+    "Homeworld": "Concord Dawn",
+    "Species": "Human",
+    "Gender": "Male",
+    "Allegiance": "Mandalorians, Galactic Republic, Kaminoan Government"
+  },
+  {
+    "Name": "Zam Wesell",
+    "Height": 168,
+    "Homeworld": "Zolan",
+    "Species": "Clawdite",
+    "Gender": "Female",
+    "Allegiance": "Sepratist, Bounty Hunters' Guild"
+  },
+  {
+    "Name": "Lama Su",
+    "Height": 229,
+    "Homeworld": "Kamino",
+    "Species": "Kaminoan",
+    "Gender": "Male",
+    "Allegiance": "Kaminoan Government, Galactic Republic, Galactic Empire"
+  },
+  {
+    "Name": "Taun We",
+    "Height": 213,
+    "Homeworld": "Kamino",
+    "Species": "Kaminoan",
+    "Gender": "Female",
+    "Allegiance": "Kaminoan Government, Galactic Republic, Galactic Empire"
+  },
+  {
+    "Name": "Jocasta Nu",
+    "Height": 167,
+    "Homeworld": "Coruscant",
+    "Species": "Human",
+    "Gender": "Female",
+    "Allegiance": "Jedi Order, Galactic Republic"
+  },
+  {
+    "Name": "Wat Tambor",
+    "Height": 193,
+    "Homeworld": "Skako",
+    "Species": "Skakoan",
+    "Gender": "Male",
+    "Allegiance": "Techno Union, Sepratist"
+  },
+  {
+    "Name": "Shaak Ti",
+    "Height": 178,
+    "Homeworld": "Shili",
+    "Species": "Togruta",
+    "Gender": "Female",
+    "Allegiance": "Jedi Order, Galactic Republic"
+  },
+  {
+    "Name": "Grievous",
+    "Height": 216,
+    "Homeworld": "Kalee",
+    "Species": "Kaleesh",
+    "Gender": "Male",
+    "Allegiance": "Sepratist"
+  },
+  {
+    "Name": "Tarfful",
+    "Height": 234,
+    "Homeworld": "Kashyyyk",
+    "Species": "Wookie",
+    "Gender": "Male",
+    "Allegiance": "Galactic Republic, Kashyyyk Resistance"
+  },
+  {
+    "Name": "Raymus Antilles",
+    "Height": 188,
+    "Homeworld": "Alderaan",
+    "Species": "Human",
+    "Gender": "Male",
+    "Allegiance": "Galactic Republic, Rebel Alliance"
+  },
+  {
+    "Name": "Tion Medon",
+    "Height": 206,
+    "Homeworld": "Utapau",
+    "Species": "Pau'an",
+    "Gender": "Male",
+    "Allegiance": "Utapaun Committee, Galactic Republic"
+  },
+  {
+    "Name": "Hunter",
+    "Height": 180,
+    "Homeworld": "Kamino",
+    "Species": "Human (Clone)",
+    "Gender": "Male",
+    "Allegiance": "Galactic Republic"
+  },
+  {
+    "Name": "Tech",
+    "Height": 193,
+    "Homeworld": "Kamino",
+    "Species": "Human (Clone)",
+    "Gender": "Male",
+    "Allegiance": "Galactic Republic"
+  },
+  {
+    "Name": "Crosshair",
+    "Height": 193,
+    "Homeworld": "Kamino",
+    "Species": "Human (Clone)",
+    "Gender": "Male",
+    "Allegiance": "Galactic Republic"
+  },
+  {
+    "Name": "Wrecker",
+    "Height": 198,
+    "Homeworld": "Kamino",
+    "Species": "Human (Clone)",
+    "Gender": "Male",
+    "Allegiance": "Galactic Republic"
+  },
+  {
+    "Name": "Echo",
+    "Height": 185,
+    "Homeworld": "Kamino",
+    "Species": "Human (Clone)",
+    "Gender": "Male",
+    "Allegiance": "Galactic Republic"
+  },
+  {
+    "Name": "Omega",
+    "Height": 129,
+    "Homeworld": "Kamino",
+    "Species": "Human (Clone)",
+    "Gender": "Female",
+    "Allegiance": "Galactic Republic"
+  },
+  {
+    "Name": "Ahsoka Tano",
+    "Height": 176,
+    "Homeworld": "Shili",
+    "Species": "Togruta",
+    "Gender": "Female",
+    "Allegiance": "Jedi Order, Galactic Republic, Rebel Alliance"
+  },
+  {
+    "Name": "Rex",
+    "Height": 183,
+    "Homeworld": "Kamino",
+    "Species": "Human (Clone)",
+    "Gender": "Male",
+    "Allegiance": "Galactic Republic, Rebel Alliance"
+  },
+  {
+    "Name": "Cody",
+    "Height": 183,
+    "Homeworld": "Kamino",
+    "Species": "Human (Clone)",
+    "Gender": "Male",
+    "Allegiance": "Galactic Republic, Galactic Empire"
+  },
+  {
+    "Name": "Ezra Bridger",
+    "Height": 182,
+    "Homeworld": "Lothal",
+    "Species": "Human",
+    "Gender": "Male",
+    "Allegiance": "Jedi Order, Rebel Alliance"
+  },
+  {
+    "Name": "Hera Syndulla",
+    "Height": 176,
+    "Homeworld": "Ryloth",
+    "Species": "Twi'lek",
+    "Gender": "Female",
+    "Allegiance": "Rebel Alliance, New Republic"
+  },
+  {
+    "Name": "Din Djarin",
+    "Height": 180,
+    "Homeworld": "Concordia",
+    "Species": "Human",
+    "Gender": "Male",
+    "Allegiance": "Mandalorians, Bounty Hunters' Guild, New Republic"
+  },
+  {
+    "Name": "Bo-Katan Kryze",
+    "Height": 172,
+    "Homeworld": "Mandalore",
+    "Species": "Human",
+    "Gender": "Female",
+    "Allegiance": "Mandalorians"
+  },
+  {
+    "Name": "Grogu",
+    "Height": 34,
+    "Homeworld": "Unknown",
+    "Species": "Unknown",
+    "Gender": "Male",
+    "Allegiance": "Jedi Order, Mandalorians"
+  },
+  {
+    "Name": "Yaddle",
+    "Height": 61,
+    "Homeworld": "Coruscant",
+    "Species": "Unknown",
+    "Gender": "Female",
+    "Allegiance": "Jedi Order, Galactic Republic"
+  },
+  {
+    "Name": "Gideon",
+    "Height": 183,
+    "Homeworld": "Unknown",
+    "Species": "Human",
+    "Gender": "Male",
+    "Allegiance": "Galactic Empire, Imperial Remnants"
+  },
+  {
+    "Name": "Thrawn",
+    "Height": 180,
+    "Homeworld": "Rentor",
+    "Species": "Chiss",
+    "Gender": "Male",
+    "Allegiance": "Galactic Empire, Imperial Remnants"
+  },
+  {
+    "Name": "Snoke",
+    "Height": 218,
+    "Homeworld": "Exegol",
+    "Species": "Humanoid Genetic Strandcast",
+    "Gender": "Male",
+    "Allegiance": "Sith, First Order"
+  },
+  {
+    "Name": "Kylo Ren",
+    "Height": 189,
+    "Homeworld": "Chandrilla",
+    "Species": "Human",
+    "Gender": "Male",
+    "Allegiance": "Jedi Order, First Order"
+  },
+  {
+    "Name": "Rey Skywalker",
+    "Height": 170,
+    "Homeworld": "Jakku",
+    "Species": "Human",
+    "Gender": "Female",
+    "Allegiance": "Jedi Order, Resistance"
+  },
+  {
+    "Name": "Poe Dameron",
+    "Height": 172,
+    "Homeworld": "Yavin 4",
+    "Species": "Human",
+    "Gender": "Male",
+    "Allegiance": "New Republic, Resistance"
+  },
+  {
+    "Name": "Asajj Ventress",
+    "Height": 179,
+    "Homeworld": "Dathomir",
+    "Species": "Zabrak",
+    "Gender": "Female",
+    "Allegiance": "Sith, Sepratist, Nightsisters"
+  },
+  {
+    "Name": "Savage Opress",
+    "Height": 189,
+    "Homeworld": "Dathomir",
+    "Species": "Zabrak",
+    "Gender": "Male",
+    "Allegiance": "Sith, Nightbrothers"
+  },
+  {
+    "Name": "Cad Bane",
+    "Height": 185,
+    "Homeworld": "Duro",
+    "Species": "Duros",
+    "Gender": "Male",
+    "Allegiance": "Bounty Hunters' Guild"
+  },
+  {
+    "Name": "Ziro",
+    "Height": 175,
+    "Homeworld": "Sleheyron",
+    "Species": "Huttt",
+    "Gender": "Male",
+    "Allegiance": "Hutt Clan"
+  },
+  {
+    "Name": "Mother Talzin",
+    "Height": 223,
+    "Homeworld": "Dathomir",
+    "Species": "Zabrak",
+    "Gender": "Female",
+    "Allegiance": "Nightsisters"
+  },
+  {
+    "Name": "Satine Kryze",
+    "Height": 177,
+    "Homeworld": "Kalevala",
+    "Species": "Human",
+    "Gender": "Female",
+    "Allegiance": "Mandalorians, Galactic Republic"
+  },
+  {
+    "Name": "Kanan Jarrus",
+    "Height": 191,
+    "Homeworld": "Coruscant",
+    "Species": "Human",
+    "Gender": "Male",
+    "Allegiance": "Jedi Order, Galactic Republic, Rebel Alliance"
+  },
+  {
+    "Name": "Jacen Syndulla",
+    "Height": 142,
+    "Homeworld": "Lothal",
+    "Species": "Human",
+    "Gender": "Male",
+    "Allegiance": "New Republic, Resistance"
+  },
+  {
+    "Name": "Sabine Wren",
+    "Height": 170,
+    "Homeworld": "Mandalore",
+    "Species": "Human",
+    "Gender": "Female",
+    "Allegiance": "Mandalorians, Rebel Alliance, New Republic"
+  },
+  {
+    "Name": "The Armorer",
+    "Height": 170,
+    "Homeworld": "Mandalore",
+    "Species": "Human",
+    "Gender": "Female",
+    "Allegiance": "Mandalorians"
+  }
+]
