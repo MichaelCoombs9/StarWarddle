@@ -23,18 +23,20 @@
             <span><br></span>
 
         </div>
-        <div id="guess-grid" class="max-w-6xl mx-auto mb-6">
-            <!-- Dynamically generated guess rows will go here -->
-            <!-- Placeholder for guess grid -->
-            <div class="grid grid-cols-7 gap-4 mb-4 text-center">
-                <div class="col-span-1 bg-white text-black font-bold p-4 rounded min-w-[500px]">Name</div>
-                <div class="col-span-1 bg-white text-black font-bold p-4 rounded min-w-[120px]">Height</div>
-                <div class="col-span-1 bg-white text-black font-bold p-4 rounded min-w-[120px]">Gender</div>
-                <div class="col-span-1 bg-white text-black font-bold p-4 rounded min-w-[120px]">Species</div>
-                <div class="col-span-1 bg-white text-black font-bold p-4 rounded min-w-[120px]">Homeworld</div>
-                <div class="col-span-1 bg-white text-black font-bold p-4 rounded min-w-[120px]">Alligances</div>
-            </div>            
-        </div>        
+        <div class="overflow-x-auto">
+            <div id="guess-grid" class="max-w-6xl mx-auto mb-6">
+                <!-- Dynamically generated guess rows will go here -->
+                <!-- Responsive Placeholder for guess grid -->
+                <div class="grid grid-cols-7 gap-4 text-center">
+                    <div class="p-4 bg-white text-black font-bold rounded overflow-hidden text-ellipsis whitespace-nowrap">Name</div>
+                    <div class="p-4 bg-white text-black font-bold rounded overflow-hidden text-ellipsis whitespace-nowrap">Height</div>
+                    <div class="p-4 bg-white text-black font-bold rounded overflow-hidden text-ellipsis whitespace-nowrap">Gender</div>
+                    <div class="p-4 bg-white text-black font-bold rounded overflow-hidden text-ellipsis whitespace-nowrap">Species</div>
+                    <div class="p-4 bg-white text-black font-bold rounded overflow-hidden text-ellipsis whitespace-nowrap">Homeworld</div>
+                    <div class="p-4 bg-white text-black font-bold rounded overflow-hidden text-ellipsis whitespace-nowrap">Alligances</div>
+                </div>
+            </div>
+        </div>              
     </div>
 
     <!-- Modal -->

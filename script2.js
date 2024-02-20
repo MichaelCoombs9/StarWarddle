@@ -164,7 +164,7 @@ function updateUI(guessCharacter, result) {
 
     // Create a new row element for the guess
     const guessRow = document.createElement('div');
-    guessRow.className = 'grid grid-cols-7 gap-4 mb-4';
+    guessRow.className = 'grid grid-cols-7 gap-4 text-center';
 
     // Define attributes to display and their corresponding labels
     const attributes = ['Name', 'Height', 'Gender', 'Species', 'Homeworld', 'Allegiance'];
@@ -177,16 +177,16 @@ function updateUI(guessCharacter, result) {
 
         // Create a cell for each attribute
         const cell = document.createElement('div');
-        cell.className = `col-span-1 p-4 rounded text-center ${getBackgroundClass(result[attribute])}`;
+        cell.className = `p-4 text-black font-bold rounded overflow-hidden text-ellipsis whitespace-nowrap ${getBackgroundClass(result[attribute])}`;
 
         let content = guessCharacter[attribute] || 'N/A'; // Default content
         if (attribute === 'Height') {
             // Add arrow for height comparison
-            const heightComparisonArrow = getHeightComparisonArrow(parseInt(guessCharacter.Height, 10), parseInt(guessCharacter.Height, 10)); // Corrected the argument passed
-            cell.innerHTML = `${content}cm ${heightComparisonArrow}`; // Set content using innerHTML
-        } else {
-            cell.textContent = content; // Use the attribute value, or 'N/A' if not available
+            const heightComparisonArrow = getHeightComparisonArrow(parseInt(guessCharacter.Height, 10), parseInt(gameState.targetCharacter.Height, 10));
+            content = `${content}cm ${heightComparisonArrow}`;
         }
+
+        cell.textContent = content; // Use the attribute value, or 'N/A' if not available
 
         // Add label as a data attribute for styling purposes
         cell.setAttribute('data-label', label);
