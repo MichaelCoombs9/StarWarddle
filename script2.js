@@ -177,7 +177,7 @@ for (let i = 0; i < attributes.length; i++) {
 
     // Create a cell for each attribute
     const cell = document.createElement('div');
-    cell.className = `p-4 justify-center text-black border-2 border-black font-bold overflow-hidden text-ellipsis whitespace-nowrap text-xs sm:text-sm md:text-base ${getBackgroundClass(result[attribute])}`;
+    cell.className = `p-4 text-left sm:text-center text-black border-2 border-black font-bold overflow-hidden text-ellipsis whitespace-nowrap text-xs sm:text-xs md:text-base ${getBackgroundClass(result[attribute])}`;
 
     if (attribute === 'Allegiance' && guessCharacter[attribute]) {
         // Format the "Allegiance" data to display each on a new line with a bullet point
