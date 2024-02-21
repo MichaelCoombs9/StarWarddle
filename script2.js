@@ -170,31 +170,34 @@ function updateUI(guessCharacter, result) {
     const attributes = ['Name', 'Height', 'Gender', 'Species', 'Homeworld', 'Allegiance'];
     const labels = ['Name', 'Height', 'Gender', 'Species', 'Homeworld', 'Allegiance']; // Use labels to display in the grid
 
-    // Loop through each attribute
-    for (let i = 0; i < attributes.length; i++) {
-        const attribute = attributes[i];
-        const label = labels[i];
+// Loop through each attribute
+for (let i = 0; i < attributes.length; i++) {
+    const attribute = attributes[i];
+    const label = labels[i];
 
-        // Create a cell for each attribute
-        const cell = document.createElement('div');
-        cell.className = `p-4 justify-center text-black border-2 border-black font-bold overflow-hidden text-ellipsis whitespace-nowrap text-xs sm:text-sm md:text-base ${getBackgroundClass(result[attribute])}`;
+    // Create a cell for each attribute
+    const cell = document.createElement('div');
+    cell.className = `p-4 justify-center text-black border-2 border-black font-bold overflow-hidden text-ellipsis whitespace-nowrap text-xs sm:text-sm md:text-base ${getBackgroundClass(result[attribute])}`;
 
-        let content = guessCharacter[attribute] || 'N/A'; // Default content
-        if (attribute === 'Height') {
-            // Add arrow for height comparison
-            const heightComparisonArrow = getHeightComparisonArrow(parseInt(guessCharacter.Height, 10), parseInt(gameState.targetCharacter.Height, 10));
-            content = `${content}cm ${heightComparisonArrow}`;
-        }
-
-        cell.textContent = content; // Use the attribute value, or 'N/A' if not available
-
-        // Add label as a data attribute for styling purposes
-        cell.setAttribute('data-label', label);
-
-        // Append the cell to the row
-        guessRow.appendChild(cell);
+    if (attribute === 'Allegiance' && guessCharacter[attribute]) {
+        // Format the "Allegiance" data to display each on a new line with a bullet point
+        const allegiancesList = guessCharacter[attribute].split(',').map(allegiance => `• ${allegiance.trim()}`).join('<br>');
+        cell.innerHTML = allegiancesList; // Use innerHTML to render the HTML content with bullet points and line breaks
+    } else if (attribute === 'Height') {
+        // Add arrow for height comparison
+        const heightComparisonArrow = getHeightComparisonArrow(parseInt(guessCharacter.Height, 10), parseInt(gameState.targetCharacter.Height, 10));
+        cell.innerHTML = `${guessCharacter[attribute] || 'N/A'}cm ${heightComparisonArrow}`; // Use innerHTML to allow rendering of HTML entities like arrows
+    } else {
+        // For other attributes, use textContent to prevent HTML injection
+        cell.textContent = guessCharacter[attribute] || 'N/A';
     }
 
+    // Add label as a data attribute for styling purposes
+    cell.setAttribute('data-label', label);
+
+    // Append the cell to the row
+    guessRow.appendChild(cell);
+}
     // Append the row to the guess grid
     guessGrid.appendChild(guessRow);
 }
