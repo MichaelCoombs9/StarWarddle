@@ -37,6 +37,9 @@ function selectRandomTargetCharacter() {
 function displaySuggestions(suggestions, input) {
     const suggestionsDropdown = document.getElementById('suggestions-dropdown');
     suggestionsDropdown.innerHTML = '';
+    if (suggestions.length === 0 || input === '') {
+        suggestionsDropdown.style.display = 'none';
+    } else {
     suggestions.forEach(Name => {
         const suggestionElement = document.createElement('div');
         suggestionElement.className = 'p-2 hover:bg-gray-600 cursor-pointer';
@@ -49,6 +52,7 @@ function displaySuggestions(suggestions, input) {
         suggestionsDropdown.appendChild(suggestionElement);
     });
     suggestionsDropdown.style.display = suggestions.length > 0 ? 'block' : 'none';
+}
 }
 
 // Initialize game data and UI components once the DOM is fully loaded
