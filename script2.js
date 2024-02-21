@@ -84,6 +84,7 @@ async function checkGuess(guess) {
     gameState.guesses.push(guessResult);
     updateUI(guessCharacter, guessResult); // Pass guessCharacter and guessResult to updateUI
     checkWinCondition();
+    updateGuessCount();
 }
 
 // Example event listener for a guess submission button
@@ -227,46 +228,54 @@ function showEndGameModal(win, characterName) {
     const title = document.getElementById("modal-title");
     const content = document.getElementById("modal-content");
     const modal = document.getElementById("failure-modal");
-    const closeButton = document.getElementById("modal-close");
-    const characterNameSpan = document.getElementById("correct-character-name");
 
-    // Update the modal based on the game outcome
-    if (win) {
-        title.textContent = "Congratulations!";
-        content.textContent = "You've guessed correctly. The character was: " + gameState.targetCharacter.Name;
-        closeButton.classList.remove("bg-blue-500");
-        closeButton.classList.remove("hover:bg-blue-700");
-        closeButton.classList.add("bg-green-500");
-        closeButton.classList.add("hover:bg-green-700");
-    } else {
-        title.textContent = "Game Over";
-        content.textContent = "You've reached the maximum number of guesses. The character was: " + gameState.targetCharacter.Name;
-        closeButton.classList.remove("bg-green-500");
-        closeButton.classList.remove("hover:bg-green-700");
-        closeButton.classList.add("bg-blue-500");
-        closeButton.classList.add("hover:bg-blue-700");
-    }
-    
-    characterNameSpan.textContent = characterName;
+    // Simplify outcome message
+    title.textContent = win ? "Congratulations!" : "Game Over";
+    content.textContent = win ? `You've guessed correctly. The character was: ${characterName}.` 
+                               : `You've reached the maximum number of guesses. The character was: ${characterName}.`;
+
+    // Adjust button colors based on outcome
+    const closeButton = document.getElementById("modal-close");
+    closeButton.className = win ? "px-4 py-2 bg-green-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-300" 
+                                : "px-4 py-2 bg-blue-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300";
 
     // Show the modal
     modal.classList.remove('hidden');
 
     // Focus the close button for accessibility
     closeButton.focus();
+}
 
-    // Add event listener to close the modal and reset the game state when the close button is clicked
-    closeButton.addEventListener('click', () => {
-    modal.classList.add('hidden');
+// Ensure the modal-close event listener is set up once outside the showEndGameModal to prevent duplication
+document.getElementById('endgame-modal-close').addEventListener('click', () => {
+    document.getElementById('failure-modal').classList.add('hidden');
     resetGameState();
+});
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Show the welcome modal
+    document.getElementById('welcomeModal').classList.remove('hidden');
+
+    // Event listener for closing the welcome modal is already correctly set up
+    document.getElementById('modal-close').addEventListener('click', () => {
+      document.getElementById('welcomeModal').classList.add('hidden');
     });
 
-}
+    // Optionally, update the guess count or perform other initialization logic here
+});
+
 
 function resetGameState() {
     // Reload the page to reset the game state
     location.reload();
 }
+
+  function updateGuessCount() {
+    const guessCountElement = document.getElementById('guess-count');
+    const currentGuessCount = gameState.guesses.length; // Assuming gameState.guesses tracks each guess
+    guessCountElement.textContent = `Guess Count: ${currentGuessCount}/6`;
+}
+  
 
 
 
