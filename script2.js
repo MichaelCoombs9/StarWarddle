@@ -192,10 +192,21 @@ for (let i = 0; i < attributes.length; i++) {
                 cell.textContent = nameContent;
             }
         } else if (attribute === 'Allegiance' && guessCharacter[attribute]) {
-        // Format the "Allegiance" data to display each on a new line with a bullet point
-        const allegiancesList = guessCharacter[attribute].split(',').map(allegiance => `• ${allegiance.trim()}`).join('<br>');
-        cell.innerHTML = allegiancesList; // Use innerHTML to render the HTML content with bullet points and line breaks
-    } else if (attribute === 'Height') {
+            // Step 1: Split the "Allegiance" data at commas and trim each item
+            const allegiancesList = guessCharacter[attribute].split(',').map(allegiance => allegiance.trim());
+            // Step 2: Further process each allegiance item based on screen width
+            const processedAllegiances = allegiancesList.map(allegiance => {
+                if (window.innerWidth < 640) {
+                    // For screens under 640px, add a line break at each space within an allegiance item
+                    return allegiance.split(' ').map(word => `<span class="indent">${word}</span>`).join('<br>');
+                } 
+                return allegiance;
+            });
+            // Join all processed allegiances with a line break to ensure each is displayed on a new line
+            const formattedAllegiances = processedAllegiances.join('<br>• ');
+            // Prepend the first bullet point and set the innerHTML of the cell
+            cell.innerHTML = `• ${formattedAllegiances}`;
+        } else if (attribute === 'Height') {
         // Add arrow for height comparison
         const heightComparisonArrow = getHeightComparisonArrow(parseInt(guessCharacter.Height, 10), parseInt(gameState.targetCharacter.Height, 10));
         cell.innerHTML = `${guessCharacter[attribute] || 'N/A'}cm ${heightComparisonArrow}`; // Use innerHTML to allow rendering of HTML entities like arrows
