@@ -109,9 +109,9 @@ function getHeightComparisonArrow(targetHeight, guessHeight) {
         return '';
     }
     if (guessHeight > targetHeight) {
-        return '&#x2193;'; // Down arrow (guessed height is lower)
-    } else if (guessHeight < targetHeight) {
         return '&#x2191;'; // Up arrow (guessed height is higher)
+    } else if (guessHeight < targetHeight) {
+        return '&#x2193;'; // Down arrow (guessed height is lower)
     } else {
         return ''; // Equal height, no arrow
     }
