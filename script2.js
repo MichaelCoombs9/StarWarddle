@@ -180,7 +180,18 @@ for (let i = 0; i < attributes.length; i++) {
     const cell = document.createElement('div');
     cell.className = `p-0.5 text-left sm:text-center text-black border-2 border-black font-bold overflow-hidden text-ellipsis whitespace-nowrap text-xs sm:text-xs md:text-base ${getBackgroundClass(result[attribute])}`;
 
-    if (attribute === 'Allegiance' && guessCharacter[attribute]) {
+           // Handling for the "Name" attribute specifically
+           if (attribute === 'Name') {
+            let nameContent = guessCharacter[attribute] || 'N/A';
+            // Check if the screen width indicates a small screen
+            if (window.innerWidth <= 640) { // Using 640px as a breakpoint for small screens
+                // Insert a line break between first and last name
+                nameContent = nameContent.replace(' ', '<br>');
+                cell.innerHTML = nameContent;
+            } else {
+                cell.textContent = nameContent;
+            }
+        } else if (attribute === 'Allegiance' && guessCharacter[attribute]) {
         // Format the "Allegiance" data to display each on a new line with a bullet point
         const allegiancesList = guessCharacter[attribute].split(',').map(allegiance => `• ${allegiance.trim()}`).join('<br>');
         cell.innerHTML = allegiancesList; // Use innerHTML to render the HTML content with bullet points and line breaks
